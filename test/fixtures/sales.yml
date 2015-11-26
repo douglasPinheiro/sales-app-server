@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpfSalesman: MyString
+  cnpjClient: MyString
+  nameClient: MyString
+  addressClient: MyString
+  productId: 1
+  quantity: 1
+
+two:
+  cpfSalesman: MyString
+  cnpjClient: MyString
+  nameClient: MyString
+  addressClient: MyString
+  productId: 1
+  quantity: 1
