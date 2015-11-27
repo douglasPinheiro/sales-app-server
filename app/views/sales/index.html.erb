@@ -1,25 +1,23 @@
 <%- model_class = Sale -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Vendas</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:cpfSalesman) %></th>
-      <th><%= model_class.human_attribute_name(:cnpjClient) %></th>
-      <th><%= model_class.human_attribute_name(:nameClient) %></th>
-      <th><%= model_class.human_attribute_name(:addressClient) %></th>
-      <th><%= model_class.human_attribute_name(:productId) %></th>
-      <th><%= model_class.human_attribute_name(:quantity) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>CPF do vendedor</th>
+      <th>CNPJ do cliente</th>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>Id do produto</th>
+      <th>Quantidade</th>
+      <th>Venda efetuada em</th>
+      <th>Ações</th>
     </tr>
   </thead>
   <tbody>
     <% @sales.each do |sale| %>
       <tr>
-        <td><%= link_to sale.id, sale_path(sale) %></td>
         <td><%= sale.cpfSalesman %></td>
         <td><%= sale.cnpjClient %></td>
         <td><%= sale.nameClient %></td>
