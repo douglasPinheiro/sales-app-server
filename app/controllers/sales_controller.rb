@@ -5,6 +5,15 @@ class SalesController < ApplicationController
   # GET /sales.json
   def index
     @sales = Sale.all
+    
+    products = ""
+    @sales.each { |sale|
+      sale.productId.split(",").each { |productId|
+        product = Product.find(productId)
+        products = products + " " + product.name
+        sale.productId = products
+      }
+    }
   end
 
   # GET /sales/1
